@@ -1,0 +1,319 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nabin"
+    tools:context="np.com.nabinkharal.callbreakcalculator.Calculator"
+    android:theme="@style/AppTheme">
+
+    <TextView
+
+        android:id="@+id/the_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="PLAYER TABLE"
+        android:textColor="#000"
+        android:textSize="@dimen/abc_text_size_large_material" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/the_text"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Default"
+            android:textColor="#CDDC39"
+            android:textSize="@dimen/abc_action_bar_icon_vertical_padding_material"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Default"
+            android:textColor="#CDDC39"
+            android:textSize="@dimen/abc_action_bar_icon_vertical_padding_material"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Default"
+            android:textColor="#CDDC39"
+            android:textSize="@dimen/abc_action_bar_icon_vertical_padding_material"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Default"
+            android:textColor="#CDDC39"
+            android:textSize="@dimen/abc_action_bar_icon_vertical_padding_material"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/bid_button1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#234566"
+        fancy:fb_focusColor="#665432"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="BID"
+        fancy:fb_textColor="#fff" />
+
+    <include
+        android:id="@+id/first_score"
+        layout="@layout/layout_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bid_button1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible" />
+
+    <include
+        android:id="@+id/second_score"
+        layout="@layout/layout_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_score"
+        android:visibility="invisible"
+
+        />
+
+    <include
+        android:id="@+id/third_score"
+        layout="@layout/layout_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_score"
+        android:visibility="invisible"
+
+        />
+
+    <include
+        android:id="@+id/fourth_score"
+        layout="@layout/layout_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/third_score"
+        android:visibility="invisible"
+
+        />
+
+    <include
+        android:id="@+id/final_score"
+        layout="@layout/layout_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fourth_score"
+
+        />
+
+    <include
+        android:id="@+id/fifth_score"
+        layout="@layout/layout_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/final_score"
+        android:visibility="invisible" />
+
+    <include
+        android:id="@+id/full_final"
+        layout="@layout/layout_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fifth_score"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/confirm_button1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/second_score"
+        android:layout_centerHorizontal="true"
+        android:onClick="confirm_button1_clicked"
+        android:visibility="invisible"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#388E3C"
+        fancy:fb_focusColor="#66BB6A"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="CONFIRM"
+        fancy:fb_textColor="#fff"
+        android:focusable="false" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/bid_button2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/second_score"
+        android:layout_centerHorizontal="true"
+        android:onClick="bid_button2_clicked"
+        android:visibility="invisible"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#234566"
+        fancy:fb_focusColor="#665432"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="BID"
+        fancy:fb_textColor="#fff" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/confirm_button2"
+        android:layout_centerHorizontal="true"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_score"
+        android:onClick="confirm_button2_clicked"
+        android:visibility="invisible"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#388E3C"
+        fancy:fb_focusColor="#66BB6A"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="CONFIRM"
+        fancy:fb_textColor="#fff" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/bid_button3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bid_button2"
+        android:layout_alignStart="@+id/bid_button2"
+        android:layout_below="@+id/second_score"
+        android:onClick="bid_button3_clicked"
+        android:visibility="invisible"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#234566"
+        fancy:fb_focusColor="#665432"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="BID"
+        fancy:fb_textColor="#fff" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/confirm_button3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/confirm_button2"
+        android:layout_alignRight="@+id/confirm_button2"
+        android:layout_below="@+id/third_score"
+        android:onClick="confirm_button3_clicked"
+        android:visibility="invisible"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#388E3C"
+        fancy:fb_focusColor="#66BB6A"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="CONFIRM"
+        fancy:fb_textColor="#fff" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/bid_button4"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/confirm_button3"
+        android:layout_alignLeft="@+id/bid_button3"
+        android:layout_alignStart="@+id/bid_button3"
+        android:onClick="bid_button4_clicked"
+        android:visibility="invisible"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#234566"
+        fancy:fb_focusColor="#665432"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="bid"
+        fancy:fb_textColor="#fff" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/confirm_button4"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/full_final"
+        android:layout_centerHorizontal="true"
+        android:onClick="confirm_button4_clicked"
+        android:visibility="invisible"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#388E3C"
+        fancy:fb_focusColor="#66BB6A"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="CONFIRM"
+        fancy:fb_textColor="#fff" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/bid_button5"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bid_button4"
+        android:layout_alignStart="@+id/bid_button4"
+        android:layout_below="@+id/final_score"
+        android:onClick="bid_button5_clicked"
+        android:visibility="invisible"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#234566"
+        fancy:fb_focusColor="#665432"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="bid"
+        fancy:fb_textColor="#fff" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/confirm_button5"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/full_final"
+        android:layout_centerHorizontal="true"
+        android:onClick="confirm_button5_clicked"
+        android:visibility="invisible"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#388E3C"
+        fancy:fb_focusColor="#66BB6A"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="CONFIRM"
+        fancy:fb_textColor="#fff" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/confirm_final"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirm_button5"
+        android:layout_centerHorizontal="true"
+        android:onClick="confirm_final_clicked"
+        android:visibility="invisible"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#388E3C"
+        fancy:fb_focusColor="#66BB6A"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="VIEW RESULT"
+        fancy:fb_textColor="#fff" />
+
+
+</RelativeLayout>
