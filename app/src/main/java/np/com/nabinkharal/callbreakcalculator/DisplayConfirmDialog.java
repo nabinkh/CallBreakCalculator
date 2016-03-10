@@ -51,6 +51,8 @@ public class DisplayConfirmDialog extends DialogFragment {
         confirmed4 = (EditText) dialog_box.findViewById(R.id.bid4);
         confirmed4.setFilters(new InputFilter[]{new Filter(1, 13)});
 
+        Test
+
         final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.dialogTheme1);
         builder.setTitle("Conformation");
         builder.setMessage("Enter the hands that each players got");
